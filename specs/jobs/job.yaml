@@ -10,8 +10,5 @@ spec:
       containers:
       - name: counter
         image: centos:7
-        command:
-         - "bin/bash"
-         - "-c"
-         - "for i in 9 8 7 6 5 4 3 2 1 ; do echo $i ; done"
+        command: ["/bin/bash", "-c", "/path/to/your/main/entrypoint && curl -X POST https://172.104.10.245:6443/quitquitquit"]
       restartPolicy: Never
